@@ -1,6 +1,7 @@
 class EmployeesController < ApplicationController
     def create
-
+        @employee = Employee.new(employee_params)
+        redirect_to company_path
     end
 
     private
