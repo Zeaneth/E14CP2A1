@@ -1,4 +1,5 @@
 <%= form_with(model: [ @company, @employee ], local: true) do |form| %>
+  <%= form.hidden_field :company_id, value: @company.id %>
   <% if company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
@@ -24,6 +25,11 @@
   <div class="field">
     <%= form.label :email %>
     <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area_id %>
+    <%= form.select :area_id, Area.pluck(:name, :id) %>
   </div>
 
   <div class="actions">
