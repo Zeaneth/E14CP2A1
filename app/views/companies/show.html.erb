@@ -8,13 +8,21 @@
       <% @company.employees.each do |employee|%>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <%= employee.first_name %>
+          <br>
+        </li>
+        <li class="list-group-item+ d-flex justify-content-between align-items-center">
           <%= employee.last_name %>
+          <br>
+        </li>
+        <li class="list-group-item">
           <%= employee.email %>
+          <br>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
           <%= employee.area %>
-
           <br>
           <div class="btn-group">
-            <%= link_to 'Destroy', employee_path(employee), class: "btn btn-danger text-right",
+            <%= link_to 'Destroy', company_employee_path(employee), class: "btn btn-danger text-right",
                         method: :delete,
                         data: { confirm: 'Are you sure? Like really? D:' } %>
           </div>
