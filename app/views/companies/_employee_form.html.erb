@@ -4,7 +4,7 @@
       <%= form.hidden_field :company_id, value: @company.id %>
       <% if company.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+          <h2><%= pluralize(company.errors.count, "error") %> prohibited this employee from being saved:</h2>
     
           <ul>
           <% company.errors.full_messages.each do |message| %>

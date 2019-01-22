@@ -10,13 +10,13 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @employees = @company.employees
     @employee = Employee.new
   end
 
   # GET /companies/new
   def new
     @company = Company.new
-    @employee = Employee.new
   end
 
   # GET /companies/1/edit
